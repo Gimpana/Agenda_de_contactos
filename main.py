@@ -1,6 +1,5 @@
 from func import *
 
-
 print("""
 ******************************************
 *               Bienvenido!!             *
@@ -16,23 +15,26 @@ print("""
 4) Borrar contacto
 5) Mostrar todos los contactos""")
 
-hacer = int(input("\nEscoge el número de una opción: "))
+hacer = input("\nEscoge el número de una opción o salir: ")
 
 while True:
-    if hacer == 1:
-        crear_contacto(hacer)
+    if hacer == "salir":
+        break
 
-    if hacer == 2:    
-        buscar_contcto(hacer)
+    if hacer == "1":
+        crear_contacto()
+
+    if hacer == "2":    
+        buscar_contcto()
         
-    if hacer == 3:
-        actualizar_contactos(hacer)
+    if hacer == "3":
+        actualizar_contactos()
         
-    if hacer == 4:
-        borrar_contacto(hacer)
+    if hacer == "4":
+        borrar_contacto()
         
-    if hacer == 5:
-        mostrar_todos_los_contactos(hacer)
+    if hacer == "5":
+        mostrar_todos_los_contactos()
     
     if comprobar_Entrada(hacer) == False:
         print("""
@@ -54,5 +56,5 @@ while True:
 4) Borrar contacto
 5) Mostrar todos los contactos""")
 
-    hacer = int(input("\nEscoge el número de una opción: "))
+    hacer = input("\nEscoge el número de una opción o salir: ")
     
